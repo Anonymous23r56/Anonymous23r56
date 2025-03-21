@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @Anonymous23r56
 - 👀 I’m interested in coding 
-- 🌱 I’m currently learning backend programming
-- 💞️ I’m looking to collaborate on learning new skills 
+- 🌱 I’m currently learning backend programming with the aim of becoming a full stack dev
+-  💞️ I’m looking to collaborate on learning new skills 
 - 📫 How to reach me WHatsapp: 08025455683
 - 😄 Pronouns: He
 - ⚡ Fun fact: I am eager to learn and adapt 
