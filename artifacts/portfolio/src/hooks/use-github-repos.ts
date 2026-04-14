@@ -14,7 +14,7 @@ export interface GithubRepo {
 
 const fetchRepos = async (): Promise<GithubRepo[]> => {
   const response = await fetch(
-    `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=stars&per_page=12`,
+    `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100`,
     {
       headers: {
         Accept: "application/vnd.github.v3+json",
@@ -29,7 +29,10 @@ const fetchRepos = async (): Promise<GithubRepo[]> => {
     throw new Error("Failed to fetch repositories.");
   }
 
-  return response.json();
+  const repos: GithubRepo[] = await response.json();
+  return repos
+    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+    .slice(0, 12);
 };
 
 export const useGithubRepos = () => {
