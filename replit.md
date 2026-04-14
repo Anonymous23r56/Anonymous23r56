@@ -29,7 +29,7 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - Tech stack badges with `react-icons/si`
 - No backend required — fully client-side
 
-**Config:** `artifacts/portfolio/src/config.ts` — change `GITHUB_USERNAME` to point to any GitHub user.
+**Config:** `artifacts/portfolio/src/config.ts` — update `GITHUB_USERNAME`, `GITHUB_DISPLAY_NAME`, `GITHUB_BIO`, `CONTACT_EMAIL`, and `LINKEDIN_URL` with your own details. GitHub data is fetched from the public GitHub API (no token required): `/users/{username}/repos` sorted by stars for the Projects section.
 
 ### API Server (`artifacts/api-server`) — served at `/api`
 - Express 5 backend with health endpoint
