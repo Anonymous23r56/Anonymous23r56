@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { CONTACT_EMAIL, GITHUB_USERNAME, LINKEDIN_URL } from "@/config";
+import { CONTACT_EMAIL, GITHUB_USERNAME, LINKEDIN_URL, WHATSAPP_URL } from "@/config";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 export function Contact() {
   return (
@@ -21,16 +21,36 @@ export function Contact() {
           I'm currently looking for new opportunities. Whether you have a question, a project idea, or just want to say hi, I'll try my best to get back to you!
         </p>
 
-        <Button size="lg" className="h-14 px-8 text-lg font-medium mb-12" asChild>
-          <a href={`mailto:${CONTACT_EMAIL}`} data-testid="btn-say-hello">
-            Say Hello
-          </a>
-        </Button>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <Button size="lg" className="h-14 px-8 text-lg font-medium w-full sm:w-auto" asChild>
+            <a href={`mailto:${CONTACT_EMAIL}`} data-testid="btn-say-hello">
+              <Mail className="w-5 h-5 mr-2" />
+              Say Hello
+            </a>
+          </Button>
+
+          <Button
+            size="lg"
+            variant="outline"
+            className="h-14 px-8 text-lg font-medium w-full sm:w-auto border-green-500/40 text-green-400 hover:bg-green-500/10 hover:text-green-300 hover:border-green-400/60 transition-colors"
+            asChild
+          >
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="btn-whatsapp"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp Me
+            </a>
+          </Button>
+        </div>
 
         <div className="flex items-center justify-center gap-6">
-          <a 
-            href={`https://github.com/${GITHUB_USERNAME}`} 
-            target="_blank" 
+          <a
+            href={`https://github.com/${GITHUB_USERNAME}`}
+            target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors p-2"
             aria-label="GitHub"
@@ -38,9 +58,9 @@ export function Contact() {
           >
             <Github className="w-6 h-6" />
           </a>
-          <a 
-            href={LINKEDIN_URL} 
-            target="_blank" 
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors p-2"
             aria-label="LinkedIn"
@@ -48,13 +68,23 @@ export function Contact() {
           >
             <Linkedin className="w-6 h-6" />
           </a>
-          <a 
-            href={`mailto:${CONTACT_EMAIL}`} 
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
             className="text-muted-foreground hover:text-primary transition-colors p-2"
             aria-label="Email"
             data-testid="link-footer-email"
           >
             <Mail className="w-6 h-6" />
+          </a>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-green-400 transition-colors p-2"
+            aria-label="WhatsApp"
+            data-testid="link-footer-whatsapp"
+          >
+            <MessageCircle className="w-6 h-6" />
           </a>
         </div>
       </motion.div>

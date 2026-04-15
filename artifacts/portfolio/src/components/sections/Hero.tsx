@@ -1,6 +1,6 @@
-import { GITHUB_DISPLAY_NAME, GITHUB_BIO, GITHUB_USERNAME, LINKEDIN_URL, CONTACT_EMAIL } from "@/config";
+import { GITHUB_DISPLAY_NAME, GITHUB_BIO, GITHUB_USERNAME, LINKEDIN_URL, CONTACT_EMAIL, WHATSAPP_URL } from "@/config";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -72,6 +72,11 @@ export function Hero() {
             <Button variant="ghost" size="icon" asChild className="h-12 w-12 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted">
               <a href={`mailto:${CONTACT_EMAIL}`} aria-label="Email" data-testid="link-email">
                 <Mail className="h-6 w-6" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild className="h-12 w-12 rounded-full text-muted-foreground hover:text-green-400 hover:bg-green-500/10">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-testid="link-whatsapp">
+                <MessageCircle className="h-6 w-6" />
               </a>
             </Button>
           </div>

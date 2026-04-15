@@ -5,6 +5,8 @@ export const CONTACT_EMAIL = "rolokor21@gmail.com";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/in/samuel-olokor-a073bb326/";
 export const TWITTER_URL = "https://x.com/Nobody134626802";
+export const WHATSAPP_NUMBER = "+2348025455683";
+export const WHATSAPP_URL = "https://wa.me/2348025455683";
 
 export const PINNED_REPOS: string[] = [
   "WhatsAppNotificationSystem",

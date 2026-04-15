@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { ABOUT, GITHUB_DISPLAY_NAME, GITHUB_USERNAME, LINKEDIN_URL } from "@/config";
-import { Briefcase, CheckCircle2, Linkedin } from "lucide-react";
+import { ABOUT, GITHUB_DISPLAY_NAME, GITHUB_USERNAME, LINKEDIN_URL, WHATSAPP_URL } from "@/config";
+import { Briefcase, CheckCircle2, Linkedin, MessageCircle } from "lucide-react";
 import { useGithubUser } from "@/hooks/use-github-user";
 
 export function About() {
@@ -67,18 +67,31 @@ export function About() {
             </div>
 
             {ABOUT.available_for_work && (
-              <motion.a
-                href={LINKEDIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 self-start bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-primary/90 transition-colors"
-              >
-                <Briefcase className="w-4 h-4" />
-                Let's Work Together
-                <Linkedin className="w-4 h-4 ml-1 opacity-70" />
-              </motion.a>
+              <div className="flex flex-wrap gap-3">
+                <motion.a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-primary/90 transition-colors"
+                >
+                  <Briefcase className="w-4 h-4" />
+                  Let's Work Together
+                  <Linkedin className="w-4 h-4 ml-1 opacity-70" />
+                </motion.a>
+                <motion.a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center gap-2 bg-green-500/10 text-green-400 border border-green-500/30 font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-green-500/20 hover:border-green-400/50 transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp Me
+                </motion.a>
+              </div>
             )}
           </motion.div>
 
