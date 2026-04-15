@@ -82,8 +82,8 @@ I'm currently **available for work** — whether you have a project idea, a ques
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-00BFFF?style=for-the-badge)](https://dev-showcase-SamOlokor.replit.app)
-[![WhatsApp](https://img.shields.io/badge/💬_WhatsApp_Me-25D366?style=for-the-badge)](https://wa.me/YOUR_NUMBER)
+[![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-00BFFF?style=for-the-badge)](https://dev-showcase--samolokor.replit.app/)
+[![WhatsApp](https://img.shields.io/badge/💬_WhatsApp_Me-25D366?style=for-the-badge)](https://wa.me/+2348025455683)
 
 </div>
 
