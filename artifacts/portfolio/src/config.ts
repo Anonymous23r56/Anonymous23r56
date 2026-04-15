@@ -1,5 +1,6 @@
-export const GITHUB_USERNAME = "your-github-username";
-export const GITHUB_DISPLAY_NAME = "Your Name";
-export const GITHUB_BIO = "Full-Stack Developer & Open Source Enthusiast";
-export const CONTACT_EMAIL = "hello@example.com";
-export const LINKEDIN_URL = "https://linkedin.com/in/your-profile";
+export const GITHUB_USERNAME = "Anonymous23r56";
+export const GITHUB_DISPLAY_NAME = "Olokor Samuel";
+export const GITHUB_BIO = "Full-Stack Developer & Problem Solver";
+export const CONTACT_EMAIL = "rolokor21@gmail.com";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/samuel-olokor-a073bb326/";
+export const TWITTER_URL = "https://x.com/Nobody134626802";

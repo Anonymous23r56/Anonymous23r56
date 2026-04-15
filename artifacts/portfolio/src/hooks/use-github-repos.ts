@@ -10,6 +10,7 @@ export interface GithubRepo {
   forks_count: number;
   language: string;
   homepage: string;
+  fork: boolean;
 }
 
 const fetchRepos = async (): Promise<GithubRepo[]> => {
@@ -30,15 +31,13 @@ const fetchRepos = async (): Promise<GithubRepo[]> => {
   }
 
   const repos: GithubRepo[] = await response.json();
-  return repos
-    .sort((a, b) => b.stargazers_count - a.stargazers_count)
-    .slice(0, 12);
+  return repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 };
 
 export const useGithubRepos = () => {
   return useQuery({
     queryKey: ["github-repos", GITHUB_USERNAME],
     queryFn: fetchRepos,
-    staleTime: 1000 * 60 * 60, // 1 hour
+    staleTime: 1000 * 60 * 60,
   });
 };

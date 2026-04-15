@@ -107,7 +107,7 @@ export function Projects() {
             viewport={{ once: true, margin: "-50px" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {repos.map((repo) => (
+            {repos.slice(0, 12).map((repo) => (
               <motion.div key={repo.id} variants={itemVariants}>
                 <Card className="h-full flex flex-col bg-card/40 border-border/40 hover:border-primary/50 transition-colors duration-300 group">
                   <CardHeader>
