@@ -26,8 +26,16 @@ if (!basePath) {
   );
 }
 
+const githubToken =
+  process.env.GITHUB_PERSONAL_ACCESS_TOKEN ||
+  process.env.VITE_GITHUB_TOKEN ||
+  "";
+
 export default defineConfig({
   base: basePath,
+  define: {
+    __GITHUB_TOKEN__: JSON.stringify(githubToken),
+  },
   plugins: [
     react(),
     tailwindcss(),

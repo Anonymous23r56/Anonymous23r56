@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { GITHUB_USERNAME } from "../config";
+import { githubHeaders } from "@/lib/github";
 
 export interface GithubRepo {
   id: number;
@@ -17,9 +18,7 @@ const fetchRepos = async (): Promise<GithubRepo[]> => {
   const response = await fetch(
     `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100`,
     {
-      headers: {
-        Accept: "application/vnd.github.v3+json",
-      },
+      headers: githubHeaders(),
     }
   );
 

@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { GITHUB_USERNAME } from "../config";
+import { githubHeaders } from "@/lib/github";
 
 export interface GithubUser {
   login: string;
@@ -15,7 +16,7 @@ export interface GithubUser {
 const fetchUser = async (): Promise<GithubUser> => {
   const response = await fetch(
     `https://api.github.com/users/${GITHUB_USERNAME}`,
-    { headers: { Accept: "application/vnd.github.v3+json" } }
+    { headers: githubHeaders() }
   );
   if (!response.ok) throw new Error("Failed to fetch user");
   return response.json();
